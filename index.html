@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jojodog.webStore</title>
+<link rel="icon" href="/images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo"><span class="logo-text">JOJODOG
+  </span></div>
+  <div class="menu">
+    <a href="#about">About</a>
+    <a href="#product">Produk</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#product" onclick="toggleMenu()">Produk</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="hero">
+  <h1>HALLO, frans</h1>
+  <P>Selamat datang di Sini, happy shoping.!!</P>
+  <button onclick="document.getElementById('product').scrollIntoView({behavior:'smooth'})">JOJODOG👌</button>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="/images/slide2.jpg"></div>
+      <div class="slide"><img src="/images/slide1.jpg"></div>
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+</div>
+
+<div class="section" id="about">
+    <h2>About</h2>
+    <P class="kata">jododog_enjoylife is a local clothing name taken from the Sundanese word for sitting, enjoy life (Menikmati Hidup) shows someone who is trying to live happily, but he doesn't know and is afraid of life changes, how to get out of it all, so sit down for a while, calm your mind and think about what you want, JOJODOG_ENJOYLIFE <br> "Menikmati hidup sambil duduk".
+    </P>
+</div>
+<div class="container section" id="product">
+<h2>Produk</h2>
+<div id="products" class="products"></div>
+<div class="cart">
+  <div id="cartItems"></div>
+  <div id="total">Total: Rp 0</div>
+  <button class="checkout" onclick="checkout()">Checkout</button>
+</div>
+</div>
+
+<div class="section" id="contact">
+  <h2>Social Media</h2>
+  <div class="circle-social">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Jojodog. All Rights Reserved.</p>
+</footer>
+
+<div class="checkout-modal" id="checkoutModal">
+  <div class="modal-box">
+    <h3>Pembayaran</h3>
+    <input id="nama" placeholder="Nama">
+    <textarea id="alamat" placeholder="Alamat"></textarea>
+    <select id="metode">
+      <option value="">Pilih Metode</option>
+      <option>COD</option>
+      <option>Transfer</option>
+      <option>E-Wallet</option>
+    </select>
+    <button onclick="processPayment()">Bayar Sekarang</button>
+    <button class="close-btn" onclick="closeModal()">Batal</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
